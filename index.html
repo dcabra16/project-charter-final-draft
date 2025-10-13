@@ -750,6 +750,41 @@
     [data-theme="dark"] .highlight {
       background: rgba(252,211,77,.2);
     }
+
+     /* Sidebar dropdown */
+.dropdown { position: relative; margin-bottom: 1rem; }
+.dropdown-toggle { width: 100%; justify-content: space-between; }
+.dropdown-menu {
+  position: relative; /* stays inside sidebar; no overflow issues */
+  margin-top: .5rem;
+  background: var(--card);
+  border: 1px solid rgba(15,23,42,.08);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  display: none;
+  flex-direction: column;
+  overflow: hidden;
+}
+[data-theme="dark"] .dropdown-menu {
+  border: 1px solid rgba(255,255,255,.1);
+}
+.dropdown-menu.show { display: flex; }
+
+.dropdown-item {
+  padding: .625rem .75rem;
+  font-size: .875rem;
+  color: var(--ink);
+  text-decoration: none;
+  transition: background .15s ease, transform .05s ease;
+}
+.dropdown-item:hover {
+  background: #f8fafc;
+  transform: translateX(2px);
+}
+[data-theme="dark"] .dropdown-item:hover {
+  background: rgba(255,255,255,.05);
+}
+  
   </style>
 </head>
 <body>
@@ -786,6 +821,20 @@
         <button class="text-size-btn active" data-size="medium" aria-label="Medium text">A</button>
         <button class="text-size-btn" data-size="large" aria-label="Large text">A</button>
       </div>
+
+        <div class="dropdown">
+  <button class="theme-toggle dropdown-toggle" id="prevDropdownBtn" aria-haspopup="true" aria-expanded="false" aria-controls="prevDropdownMenu">
+    📄 Previous Status Reports  ▾
+  </button>
+  <div class="dropdown-menu" id="prevDropdownMenu" role="menu">
+    <!-- Put  weekly  project  reports  here  -->
+    <a class="dropdown-item" role="menuitem" href="davidd-week6-project-status-report.pdf">Week 6</a>
+    <a class="dropdown-item" role="menuitem" href="davidd-week7-project-status-report.pdf">Week 7</a>
+  </div>
+
+</div>
+
+      
       <div class="toc-controls">
         <input type="search" id="searchInput" placeholder="Search sections..." />
         <button id="expandAll">Expand All</button>
@@ -1354,5 +1403,55 @@
         }
       });
     });
+
+    // Sidebar dropdown logic
+  (function(){
+    const btn = document.getElementById('prevDropdownBtn');
+    const menu = document.getElementById('prevDropdownMenu');
+
+    function closeMenu() {
+      menu.classList.remove('show');
+      btn.setAttribute('aria-expanded', 'false');
+    }
+
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const open = menu.classList.toggle('show');
+      btn.setAttribute('aria-expanded', String(open));
+    });
+
+    // Close on click outside
+    document.addEventListener('click', (e) => {
+      if (!menu.contains(e.target) && !btn.contains(e.target)) closeMenu();
+    });
+
+    // Keyboard accessibility
+    btn.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowDown') {
+        e.preventDefault();
+        menu.classList.add('show');
+        btn.setAttribute('aria-expanded', 'true');
+        const first = menu.querySelector('.dropdown-item');
+        if (first) first.focus();
+      }
+    });
+    menu.addEventListener('keydown', (e) => {
+      const items = Array.from(menu.querySelectorAll('.dropdown-item'));
+      const index = items.indexOf(document.activeElement);
+      if (e.key === 'Escape') { closeMenu(); btn.focus(); }
+      if (e.key === 'ArrowDown') {
+        e.preventDefault();
+        const next = items[(index + 1) % items.length];
+        if (next) next.focus();
+      }
+      if (e.key === 'ArrowUp') {
+        e.preventDefault();
+        const prev = items[(index - 1 + items.length) % items.length];
+        if (prev) prev.focus();
+      }
+    });
+  })();
+
+    
   </script>
 </body>
