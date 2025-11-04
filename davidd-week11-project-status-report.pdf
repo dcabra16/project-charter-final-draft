@@ -1,0 +1,318 @@
+
+                <html xmlns:o="urn:schemas-microsoft-com:office:office" 
+                      xmlns:w="urn:schemas-microsoft-com:office:word" 
+                      xmlns="http://www.w3.org/TR/REC-html40">
+                <head>
+                    <meta charset="utf-8">
+                    <title>Weekly Project Status Report - IT Department Career Advancement Project</title>
+                    <!--[if gte mso 9]>
+                    <xml>
+                        <w:WordDocument>
+                            <w:View>Print</w:View>
+                            <w:Zoom>90</w:Zoom>
+                            <w:DoNotPromptForConvert/>
+                            <w:DoNotShowInsertionsAndDeletions/>
+                        </w:WordDocument>
+                    </xml>
+                    <![endif]-->
+                    <style>
+                        @page {
+                            margin: 1in;
+                            size: 8.5in 11in;
+                        }
+                        body {
+                            font-family: 'Calibri', 'Arial', sans-serif;
+                            font-size: 11pt;
+                            line-height: 1.15;
+                            color: #333;
+                            margin: 0;
+                            padding: 0;
+                        }
+                        .header {
+                            background-color: #2d5d3b;
+                            color: #ffffff;
+                            padding: 20px;
+                            text-align: center;
+                            margin-bottom: 20px;
+                            border-radius: 8px;
+                        }
+                        .header h1 {
+                            font-size: 20pt;
+                            font-weight: bold;
+                            margin: 0 0 8px 0;
+                            color: #ffffff;
+                        }
+                        .header .subtitle {
+                            font-size: 14pt;
+                            margin: 0;
+                            color: #ffffff;
+                        }
+                        .header .timestamp {
+                            font-size: 10pt;
+                            font-style: italic;
+                            margin-top: 10px;
+                            color: #ffffff;
+                        }
+                        .section {
+                            margin-bottom: 25px;
+                            page-break-inside: avoid;
+                        }
+                        .section-title {
+                            background-color: #4a7c59;
+                            color: white;
+                            padding: 10px 15px;
+                            font-size: 14pt;
+                            font-weight: bold;
+                            margin: 0 0 10px 0;
+                            border-radius: 5px;
+                        }
+                        .info-table {
+                            width: 100%;
+                            border-collapse: collapse;
+                            margin-bottom: 15px;
+                        }
+                        .info-table td {
+                            padding: 8px 12px;
+                            border: 1px solid #ddd;
+                            vertical-align: top;
+                        }
+                        .info-label {
+                            background-color: #f8f9fa;
+                            font-weight: bold;
+                            width: 25%;
+                        }
+                        .health-status {
+                            background-color: #fff3cd;
+                            color: #856404;
+                            font-weight: bold;
+                            padding: 8px 12px;
+                            border-radius: 5px;
+                            display: inline-block;
+                            margin: 5px 0;
+                        }
+                        .list-item {
+                            margin: 8px 0;
+                            padding: 5px 0;
+                            border-bottom: 1px solid #eee;
+                        }
+                        .milestone-table {
+                            width: 100%;
+                            border-collapse: collapse;
+                            margin: 10px 0;
+                        }
+                        .milestone-table th {
+                            background-color: #e8f5e8;
+                            color: #2d5d3b;
+                            padding: 10px;
+                            text-align: left;
+                            font-weight: bold;
+                            border: 1px solid #ccc;
+                        }
+                        .milestone-table td {
+                            padding: 8px 10px;
+                            border: 1px solid #ddd;
+                            vertical-align: top;
+                        }
+                        .risk-item {
+                            background-color: #fff8f0;
+                            border-left: 4px solid #ff9800;
+                            padding: 12px;
+                            margin: 10px 0;
+                            border-radius: 0 5px 5px 0;
+                        }
+                        .risk-header {
+                            font-weight: bold;
+                            color: #333;
+                            margin-bottom: 5px;
+                        }
+                        .severity-badge {
+                            display: inline-block;
+                            padding: 3px 8px;
+                            border-radius: 10px;
+                            font-size: 9pt;
+                            font-weight: bold;
+                            text-transform: uppercase;
+                            margin-left: 10px;
+                        }
+                        .severity-low { background-color: #d4edda; color: #155724; }
+                        .severity-medium { background-color: #fff3cd; color: #856404; }
+                        .severity-high { background-color: #f8d7da; color: #721c24; }
+                        .severity-critical { background-color: #d1ecf1; color: #0c5460; }
+                        .risk-mitigation {
+                            color: #666;
+                            font-style: italic;
+                            margin-top: 8px;
+                        }
+                        .changes-grid {
+                            margin: 10px 0;
+                        }
+                        .change-item {
+                            background-color: #f8f9fa;
+                            padding: 12px;
+                            margin: 8px 0;
+                            border-left: 3px solid #6c757d;
+                            border-radius: 0 5px 5px 0;
+                        }
+                        .change-label {
+                            font-weight: bold;
+                            color: #495057;
+                            margin-bottom: 5px;
+                        }
+                        .footer {
+                            text-align: center;
+                            margin-top: 40px;
+                            padding: 15px;
+                            background-color: #f8f9fa;
+                            border-radius: 5px;
+                            color: #666;
+                            font-size: 10pt;
+                            font-style: italic;
+                        }
+                        @media print {
+                            .section { page-break-inside: avoid; }
+                            .header { page-break-after: avoid; }
+                        }
+                    </style>
+                </head>
+                <body>
+                    <div class="header">
+                        <h1>📊 Weekly Project Status Report</h1>
+                        <div class="subtitle">IT Department Career Advancement Project</div>
+                        <div class="timestamp">Generated: Monday, November 3, 2025 at 10:41 PM</div>
+                    </div>
+
+                    <div class="section">
+                        <div class="section-title">📝 Basic Information</div>
+                        <table class="info-table">
+                            <tr>
+                                <td class="info-label">Reporting Period:</td>
+                                <td>Week 11:Oct 28- November 3,2025</td>
+                            </tr>
+                            <tr>
+                                <td class="info-label">Project Name:</td>
+                                <td>IT Department Career Advancement Project</td>
+                            </tr>
+                            <tr>
+                                <td class="info-label">Project Goal:</td>
+                                <td>The goal of my project is to build the technical expertise, professional relationships, and internal visibility needed to make that move possible. I will do this by completing relevant IT training and certifications, applying new skills in practical settings at work, and seeking mentorship from expe</td>
+                            </tr>
+                            <tr>
+                                <td class="info-label">Project Manager:</td>
+                                <td>David Dominguez</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="section">
+                        <div class="section-title">🏥 Project Health</div>
+                        <div class="health-status">🟡 AT RISK</div>
+                        <p><strong>Executive Summary:</strong> The project is progressing well with a clear goal of moving into an IT support role. The project charter is still under construction, but recent updates to artifacts have improved alignment with the revised objectives. Some delays remain in completing deliverables, work breakdown structures, budget estimates, and methodology, which temporarily affect documentation timelines. </p>
+                    </div>
+
+                    
+                    <div class="section">
+                        <div class="section-title">✅ Accomplishments This Week</div>
+                        
+                            <div class="list-item">
+                                <strong>1.</strong> ✓ Integrated feedback from my professor to better align the project with workplace opportunities in the IT department.
+                            </div>
+                        
+                            <div class="list-item">
+                                <strong>2.</strong> ✓ Updated project artifacts to reflect new objectives and ensure consistency across documentation.
+                            </div>
+                        
+                            <div class="list-item">
+                                <strong>3.</strong> ✓ Revamped the project charter to align with my updated goal of advancing into an IT support role.
+                            </div>
+                        
+                    </div>
+                    
+
+                    
+                    <div class="section">
+                        <div class="section-title">📅 Plan for Next Week</div>
+                        
+                            <div class="list-item">
+                                <strong>1.</strong> → Finalize the project charter by completing the remaining sections, including deliverables, work breakdown structure, budget, and methodology.
+                            </div>
+                        
+                            <div class="list-item">
+                                <strong>2.</strong> → Draft an updated elevator pitch for networking use.
+                            </div>
+                        
+                            <div class="list-item">
+                                <strong>3.</strong> → Perform a skills alignment analysis comparing current competencies to IT support role requirements
+                            </div>
+                        
+                    </div>
+                    
+
+                    
+                    <div class="section">
+                        <div class="section-title">🎯 Upcoming Milestones</div>
+                        <table class="milestone-table">
+                            <thead>
+                                <tr>
+                                    <th style="width: 45%;">Milestone</th>
+                                    <th style="width: 25%;">Target Date</th>
+                                    <th style="width: 30%;">Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                        <tr>
+                                            <td>Finalize Project Charter</td>
+                                            <td>11/6/2025</td>
+                                            <td>ON TRACK</td>
+                                        </tr>
+                                    
+                                        <tr>
+                                            <td>Network with IT professionals through workplace connections, LinkedIn, or professional groups to gain insights and mentorship.</td>
+                                            <td>11/10/2025</td>
+                                            <td>ON TRACK</td>
+                                        </tr>
+                                    
+                                        <tr>
+                                            <td>Establish communication and reporting routines for consistent updates to stakeholders</td>
+                                            <td>11/10/2025</td>
+                                            <td>ON TRACK</td>
+                                        </tr>
+                                    
+                            </tbody>
+                        </table>
+                    </div>
+                    
+
+                    <div class="section">
+                        <div class="section-title">⚠️ Issues & Risks / Mitigations</div>
+                        
+                            <div class="risk-item" style="border-left: 4px solid #4caf50;">
+                                <div class="risk-header">No issues or risks to report</div>
+                                <div class="risk-mitigation">No issues or risks identified for this reporting period.</div>
+                            </div>
+                        
+                    </div>
+
+                    <div class="section">
+                        <div class="section-title">🔄 Changes Since Last Report</div>
+                        <div class="changes-grid">
+                            
+                                
+                                    <div class="change-item">
+                                        <div class="change-label">Change #1:</div>
+                                        <div style="margin-bottom: 8px;"><strong>Date:</strong> 2025-10-27</div>
+                                        <div style="margin-bottom: 8px;"><strong>Description:</strong> Since the previous update, the project charter has been revised and expanded to align with the newly defined goal of advancing into an IT support role. Several project artifacts have been updated to reflect the revised objectives, ensuring consistency across documentation. The project’s focus has shifted from initial planning to refining structure and deliverables, with clearer direction for completing the work breakdown structure, budget, and methodology. Despite minor time setbacks, the project has maintained steady progress and stronger alignment with career development goals.</div>
+                                        <div><strong>Reason / Impact if not made:</strong> The project charter and related artifacts were updated to better align with the revised goal of transitioning into an IT support role and to ensure all project components reflect this direction. These changes were necessary to maintain relevance, accuracy, and focus throughout project execution. If the updates had not been made, the project risked continuing under outdated objectives, leading to misaligned deliverables, unclear priorities, and reduced effectiveness in achieving the intended career development outcomes.</div>
+                                    </div>
+                                
+                            
+                        </div>
+                    </div>
+
+                    <div class="footer">
+                        Generated by Class Project Status Template<br>
+                        Managing IT Projects Course
+                    </div>
+                </body>
+                </html>
+            
